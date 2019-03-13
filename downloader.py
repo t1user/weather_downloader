@@ -1,7 +1,6 @@
 import requests
 import json
 import time
-from pprint import pprint
 import pickle
 import datetime
 from sqlalchemy import create_engine
