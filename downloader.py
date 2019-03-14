@@ -99,15 +99,7 @@ if __name__ == '__main__':
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
 
-    """
-    # define data to be downloaded
-    targets = ['Warsaw', 'London', 'Berlin', 'Paris', 'Rome', 'Madrid', 'Istanbul',
-               'Moscow', 'New York', 'Rio de Janeiro', 'Mexico', 'Beijing',
-               'Mumbai', 'Quito', 'Buenos Aires', 'Sydney', 'Tokyo', 'Bangkok',
-               'Cape Town', 'Lagos']
-    targets_str = ','.join(targets)
-    """
-    # dowload ids of locations
+    # download ids of locations
     with open('id_dict.pickle', 'rb') as f:
         ids_dict = pickle.load(f)
     ids = [str(i) for city, i in ids_dict.items()]
