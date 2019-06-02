@@ -28,6 +28,11 @@ class Weather(Base):
     clouds = Column(Float)
     dt = Column(DateTime)
 
+    def __repr__(self):
+        return '<Weather (timestamp={}, city={}, temperature={})>'.format(self.timestamp,
+                                                                         self.city,
+                                                                         self.temperature)
+    
 
 class Forecast(Base):
     __tablename__ = 'forecasts'

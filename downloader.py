@@ -99,7 +99,7 @@ if __name__ == '__main__':
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
 
-    # download ids of locations
+    # read ids of locations
     with open('id_dict.pickle', 'rb') as f:
         ids_dict = pickle.load(f)
     ids = [str(i) for city, i in ids_dict.items()]
